@@ -138,6 +138,22 @@ function initializeCountdown() {
     updateCountdown(); // Ejecutar la actualización de inmediato
     let countdownInterval = setInterval(updateCountdown, 1000); // Actualizar cada segundo
 }
+document.getElementById('startJourney').addEventListener('click', function() {
+    const audio = document.getElementById('backgroundMusic');
+    audio.volume = 0.3; // El volumen va de 0.0 (silencio) a 1.0 (máximo)
+
+
+    // Verificar si el archivo está cargado antes de reproducirlo
+    audio.load();
+
+    audio.play().then(() => {
+        console.log("Música iniciada correctamente.");
+    }).catch(error => {
+        console.error("Error al reproducir música:", error);
+    });
+});
+
+
 
 
 
