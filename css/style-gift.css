@@ -1,0 +1,105 @@
+.gift-section {
+    position: relative;
+    padding: 4rem 1rem;
+    background-color: #0b0333;
+    overflow: hidden;
+  }
+
+  .gift-card {
+    position: relative;
+    background: #13074b;
+    border: 2px solid yellow;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 0 12px #ffe600b0;
+    text-align: center;
+    color: white;
+  }
+
+  .gift-background {
+    position: relative;
+    height: 160px;
+    margin-bottom: 1rem;
+  }
+
+  .gift-rocket {
+    width: 80px;
+    animation: floatRocket 4s ease-in-out infinite;
+    z-index: 2;
+    position: relative;
+  }
+
+  @keyframes floatRocket {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .gift-planet {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: floatPlanet 20s linear infinite;
+  }
+
+  .planet-1 {
+    background: radial-gradient(circle, #8f00ff, #3a00a3);
+    width: 60px; height: 60px;
+    top: 0; left: 10%;
+  }
+
+  .planet-2 {
+    background: radial-gradient(circle, #00c2ff, #00577d);
+    width: 40px; height: 40px;
+    bottom: 10px; right: 15%;
+  }
+
+  .planet-3 {
+    background: radial-gradient(circle, #ffd900, #ff9900);
+    width: 30px; height: 30px;
+    top: 30px; right: 5%;
+  }
+
+  @keyframes floatPlanet {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+  }
+
+  .gift-title {
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: #ffe600;
+  }
+
+  .gift-alias {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+    background: #ffe600;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #1b005e;
+    text-decoration: none;
+    box-shadow: 0 0 15px #ffe600aa;
+    transition: transform 0.3s ease;
+  }
+
+  .gift-alias:hover {
+    transform: scale(1.05);
+  }
+
+  .gift-thanks {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #00ffcc;
+    text-align: center;
+    animation: fadeIn 1s ease forwards;
+  }
+
+  .hidden { display: none; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }

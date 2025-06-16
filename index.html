@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Thiago cumple 6 años - Invitación Espacial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Overlay de Bienvenida -->
+    <div id="welcomeOverlay" class="overlay">
+        <div class="stars-container">
+            <div class="stars"></div>
+            <div class="stars2"></div>
+            <div class="stars3"></div>
+        </div>
+        <div class="overlay-content">
+            <div class="welcome-rocket"><img src="img/cohete.png" alt="cohete-png" width="100"></div>
+            <h1 class="welcome-title">¡Bienvenido al espacio de Thiago!</h1>
+            <p class="welcome-subtitle">Prepárate para un cumpleaños galáctico</p>
+            <button id="startJourney" class="start-btn">
+                <span><img src="img/estrella.png" alt="estrella-png" width="30"><span>Iniciar viaje estelar</span> <img
+                        src="img/estrella.png" alt="estrella-png" width="30"></span>
+            </button>
+        </div>
+        <div class="particles"></div>
+    </div>
+
+    <!-- Control de Música -->
+    <div id="musicControl" class="music-control hidden">
+        <button id="musicToggle" class="music-btn">
+            <span class="music-icon">🎵</span>
+        </button>
+    </div>
+
+    <!-- Audio -->
+    <audio id="backgroundMusic" loop>
+        <source src="https://www.soundjay.com/misc/sounds/space-ambience.mp3" type="audio/mpeg">
+        <!-- Fallback silencioso -->
+    </audio>
+
+    <!-- Contenido Principal -->
+    <main id="mainContent" class="main-content hidden">
+        <!-- Encabezado Principal -->
+        <header class="hero-section">
+            <video autoplay loop muted playsinline class="hero-video">
+                <source src="videos/hero-video.mp4" type="video/mp4">
+            </video>
+            <div class="stars-bg"></div>
+            <div class="container">
+                <img src="img/astronauta-hero.png" alt="astronauta-hero" width="150">
+
+                <div class="logo-container">
+                    <div class="logo">
+                        <div class="logo-text">THIAGO</div>
+                        <div class="logo-subtitle">SPACE ADVENTURE</div>
+                    </div>
+                </div>
+
+                <h1 class="hero-title">Thiago cumple 6 años</h1>
+
+                <p class="hero-subtitle">¡Nos vemos el 22 de noviembre en la galaxia fiesta!</p>
+            </div>
+        </header>
+
+
+        <!-- Cuenta Regresiva -->
+        <section class="countdown-section">
+            <div class="container">
+                <span>
+                    <h2 class="section-title"><img src="img/cohete-2.png" alt="cohete-png" width="70"> Cuenta Regresiva
+                        Espacial</h2>
+                </span>
+                <div id="countdown" class="countdown">
+                    <div class="countdown-item">
+                        <span id="days" class="countdown-number">00</span>
+                        <span class="countdown-label">Días</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours" class="countdown-number">00</span>
+                        <span class="countdown-label">Horas</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes" class="countdown-number">00</span>
+                        <span class="countdown-label">Minutos</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds" class="countdown-number">00</span>
+                        <span class="countdown-label">Segundos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detalles del Evento -->
+        <section class="event-details">
+            <div class="container">
+                <h2 class="section-title"><img src="img/info-mision.png" alt="info-png" width="150"> Información de la
+                    Misión</h2>
+                <div class="details-grid">
+                    <div class="detail-card">
+                        <div class="detail-icon"><img src="img/calendar.png" alt="calendar-icon" width="100"></div>
+                        <h3>Fecha Estelar</h3>
+                        <p>22 de Noviembre 2025</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon"><img src="img/reloj.png" alt="reloj-png" width="100"></div>
+                        <h3>Hora de Despegue</h3>
+                        <p>15:00 hrs</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon"><img src="img/ubicacion.png" alt="icono-ubicacion" width="100"></div>
+                        <h3>Base Espacial</h3>
+                        <p>Av. Las Galaxias 123<br>Ciudad Estelar</p>
+                    </div>
+                    <!-- Ahora el botón está dentro del grid -->
+                    <button class="map-btn" onclick="openMap()">
+                        <img src="img/google-maps.png" alt="icono-maps" width="50"> Ver en Google Maps
+                    </button>
+                </div>
+
+
+        </section>
+
+        <!-- Zona Interactiva -->
+        <section class="interactive-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <div class="planet-visual"><img src="img/saturno-pro.png" alt="" width="150"
+                            class="planet-img icon-bounce-rotate"></div> ¿A qué planeta te gustaría viajar con Thiago?
+                </h2>
+                <div class="planets-selection">
+                    <div class="planet-option" data-planet="mars">
+                        <div class="planet-visual"><img src="img/marte.png" alt="" width="80"
+                                class="planet-img icon-bounce-rotate"></div>
+                        <h3>Marte</h3>
+                        <p>El planeta rojo</p>
+                    </div>
+                    <div class="planet-option" data-planet="jupiter">
+                        <div class="planet-visual"><img src="img/jupiter.png" alt="jupiter" width="80"
+                                class="planet-img icon-bounce-rotate"></div>
+                        <h3>Júpiter</h3>
+                        <p>El gigante gaseoso</p>
+                    </div>
+                    <div class="planet-option" data-planet="saturn">
+                        <div class="planet-visual"><img src="img/saturno.png" alt="" width="80"
+                                class="planet-img icon-bounce-rotate"></div>
+                        <h3>Saturno</h3>
+                        <p>El de los anillos</p>
+                    </div>
+                </div>
+                <div id="planetMessage" class="planet-message hidden"></div>
+            </div>
+        </section>
+
+        <!-- Galería de Fotos -->
+        <section class="gallery-section">
+            <div class="container">
+                <h2 class="section-title"><img src="img/camera.png" alt="" width="80"> Aventuras Espaciales de Thiago</h2>
+                <div class="gallery-carousel">
+                    <div class="gallery-track">
+                        <div class="gallery-item">
+                            <img src="img/niño-1.jpg" alt="Thiago explorando">
+                            <div class="gallery-caption">Explorando nuevos mundos</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/niño-2.jpg" alt="Thiago jugando">
+                            <div class="gallery-caption">Jugando en el espacio</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/niño-3.webp" alt="Thiago feliz">
+                            <div class="gallery-caption">Cumpleaños cósmico</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/niño-4.webp" alt="Thiago astronauta">
+                            <div class="gallery-caption">Mi astronauta favorito</div>
+                        </div>
+                    </div>
+                    <button class="gallery-btn gallery-prev">‹</button>
+                    <button class="gallery-btn gallery-next">›</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP -->
+        <section class="rsvp-section">
+            <div class="container">
+                <h2 class="section-title"><img src="img/ufo.png" alt="" width="50"> Confirmación de Asistencia</h2>
+                <div class="rsvp-card">
+                    <form id="rsvpForm" class="rsvp-form">
+                        <div class="form-group">
+                            <label for="guestName"><img src="img/astronauta-icon.png" alt="" width="50"> Nombre del
+                                Astronauta</label>
+                            <input type="text" id="guestName" name="guestName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="attendance" class="cohete-2"><img src="img/cohete.png" alt="" width="50">
+                                ¿Vienes a la aventura?</label>
+                            <select id="attendance" name="attendance" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="si">¡Sí, estaré allí! <img src="img/star-2.png" alt="" width="30">
+                                </option>
+                                <option value="no">No podré asistir 😢</option>
+                                <option value="maybe">Tal vez pueda ir 🤔</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><img src="img/spiral.png" alt="" width="50"> Mensaje para Thiago (opcional)</label>
+                            <textarea id="message" name="message"
+                                placeholder="¡Escribe algo divertido para Thiago!"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span><img src="img/phone.png" alt="" width="40"> Confirmar por WhatsApp</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Regalos Galácticos Mejorada -->
+<section class="gift-section">
+  <div class="container">
+    <h2 class="section-title">
+      <img src="img/regalo.png" alt="Regalo" class="icon-bounce" width="80">
+      Mesa de Regalos Galáctica
+    </h2>
+
+    <div class="gift-card" id="giftCard">
+      <div class="gift-background">
+        <img src="img/cohete.png" alt="Cohete" class="gift-rocket" id="rocketIcon">
+        <div class="gift-planet planet-1"></div>
+        <div class="gift-planet planet-2"></div>
+        <div class="gift-planet planet-3"></div>
+      </div>
+
+      <div class="gift-content">
+        <h3 class="gift-title">TU PRESENCIA ES EL MEJOR REGALO</h3>
+        <p>Pero si querés sumarte a la nave de los regalos...</p>
+        <p><strong>Alias de Mercado Pago:</strong></p>
+        <a href="https://link.mercadopago.com.ar/thiago.space.6" target="_blank" class="gift-alias">THIAGO.SPACE.6</a>
+        <p class="gift-note">Tu aporte ayuda a que esta misión sea aún más increíble.<br>¡Gracias por ser parte del viaje! ⭐</p>
+      </div>
+    </div>
+
+    <div id="giftThanks" class="gift-thanks hidden">
+      <p>🎉 ¡Gracias por tu regalo galáctico! Thiago te manda un abrazo interplanetario. 🚀</p>
+    </div>
+  </div>
+</section>
+
+        <!-- Mensaje de Cierre -->
+        <section class="closing-section">
+            <div class="container">
+                <div class="closing-card">
+                    <div class="closing-rocket"><img src="img/cohete.png" alt="" width="150"></div>
+                    <h2>¡Gracias por acompañarme en mi viaje entre galaxias y torta de chocolate!</h2>
+                    <p class="closing-signature">Thiago <img src="img/astronauta-icon.png" alt="" width="50"></p>
+                    <div class="closing-stars">⭐ 🌟 ✨ 💫 ⭐</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast de Confirmación -->
+    <div id="toast" class="toast hidden">
+        <div class="toast-content">
+            <span class="toast-icon">🚀</span>
+            <span class="toast-message">¡Listo, nos vemos en la estación espacial!</span>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/script-gift.js"></script>
+</body>
+
+</html>
